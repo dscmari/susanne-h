@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write # Needed by the peaceiris action to push content
+  pages: write
+  id-token: write
+
 jobs:
   build:
     name: Build
@@ -33,7 +38,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Download artifact
