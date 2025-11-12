@@ -3,7 +3,7 @@ name: Deploy Workflow # Required top-level key
 on: # Required key defining when the workflow runs
   push:
     branches:
-      - main
+      - gh-pages
 
 jobs:
   build:
