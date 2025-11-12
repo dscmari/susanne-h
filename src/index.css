@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-custom-blue: #00a8ff;
+  --color-custom-white: #f5f6fa;
+}
+
+@font-face {
+  font-family: 'Montserrat Variable';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations'); 
+  font-weight: 100 900; 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather Variable';
+  src: url('/fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('truetype-variations'); 
+  font-weight: 100 900; 
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Montserrat Variable', sans-serif;
+  background-color: var(--color-custom-white);
+  scroll-behavior: smooth;
+}
+
+#home-container {
+    position: relative;
+}
+
+#home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/bg_flow.png');
+  opacity: 0.3; 
+  z-index: -10;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+h2 {
+  font-size: 1.25em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.merriweather{
+  font-family: 'Merriweather Variable', 'serif';
+}
+
+.intro {
+  position: relative;
+}
+
+.intro::before, 
+.intro::after {
+  content: "";
+  display: block; /* Wichtig, um Breite und Höhe zuzuweisen */
+  height: 2px; /* Dicke der Linie */
+  background-color: var(--color-custom-blue); 
+  flex-grow: 1; /* Lässt die Linie den gesamten verfügbaren Platz einnehmen */
+  max-width: 50px; /* Optional: Maximale Länge der Linie begrenzen */
+}
+.intro::before {
+  /* Linearer Verlauf von transparent zu blau (rechts) */
+  background: linear-gradient(to right, transparent, var(--color-custom-blue));
+}
+
+/* Spezieller Verlauf für die rechte Linie (::after) */
+.intro::after {
+  /* Linearer Verlauf von blau (links) zu transparent */
+  background: linear-gradient(to left, transparent, var(--color-custom-blue)); 
+}
+
+
+
+/* .quote::before {
+  content: "“";
+  position: absolute;
+  left: -20px;
+  top: -30px;
+  
+  font-size: 4rem; 
+ font-family: 'Montserrat Variable', sans-serif;
+  line-height: 1;
+}
+
+.quote:after {
+  content: "”";
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+  font-size: 4rem;
+ font-family: 'Montserrat Variable', sans-serif;
+  z-index: -1;
+} */
+
+
+
