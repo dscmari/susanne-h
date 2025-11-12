@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ArrowRight from "../assets/icons/arrow-right";
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);

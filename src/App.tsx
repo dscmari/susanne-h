@@ -1,5 +1,4 @@
 import Introduction from "./components/Introduction.tsx";
-import Navbar from "./components/Navbar.tsx";
 import Kontakt from "./components/Kontakt.tsx";
 import Footer from "./components/Footer.tsx"
 import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
