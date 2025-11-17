@@ -39,7 +39,9 @@
   right: 0;
   bottom: 0;
   background-image: url('/bg_flow.png');
-  opacity: 0.3; 
+  background-size: cover;       /* Scales image to cover the area (may crop) */
+  background-position: center;
+  opacity: 0.7; 
   z-index: -10;
 }
 
@@ -80,29 +82,5 @@ h2 {
   /* Linearer Verlauf von blau (links) zu transparent */
   background: linear-gradient(to left, transparent, var(--color-custom-blue)); 
 }
-
-
-
-/* .quote::before {
-  content: "“";
-  position: absolute;
-  left: -20px;
-  top: -30px;
-  
-  font-size: 4rem; 
- font-family: 'Montserrat Variable', sans-serif;
-  line-height: 1;
-}
-
-.quote:after {
-  content: "”";
-  position: absolute;
-  right: 0;
-  bottom: -70px;
-  font-size: 4rem;
- font-family: 'Montserrat Variable', sans-serif;
-  z-index: -1;
-} */
-
 
 

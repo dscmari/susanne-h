@@ -1,53 +1,19 @@
 import Introduction from "./components/Introduction.tsx";
 import Kontakt from "./components/Kontakt.tsx";
-import Footer from "./components/Footer.tsx"
+import Footer from "./components/Footer.tsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
-
+import checkIsMobile from "./utils/checkIsMobile";
+import BeautyCards from "./components/BeautyCards.tsx";
 
 function App() {
+  const isMobile = checkIsMobile();
+
   return (
     <div id="home-container" className="relative">
-      <Introduction />
-         <Kontakt/>
-      <div className="my-16">
-        <section
-          id="anwendungen"
-          className="flex flex-col gap-8 rounded mt-8 mx-8"
-        >
-          <p>
-            In welchem Bereichen unterstützt die{" "}
-            <a href="#lymphdrainage" className="underline">Lymphdrainage</a>?
-          </p>
-          <div className="flex flex-col gap-8">
-            <div className="bg-custom-white rounded p-4 py-8">
-              <h1 className="text-center pb-4">Zellulite</h1>
-              <p className="">
-                Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
-                werden abzutransportiert und Dellen gemildert
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-8">
-            <div className="bg-custom-white rounded p-4 py-8">
-              <h1 className="text-center pb-4">Detox</h1>
-              <p className="">
-                Verbessert die körpereigene Entwässerung und Entschlackung des
-                Gewebes
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-8">
-            <div className="bg-custom-white rounded p-4 py-8">
-              <h1 className="text-center pb-4">Anti-Aging</h1>
-              <p className="">
-                Reduktion von Tränensäcken, um das Hautbild zu klären und einen
-                frischen Teint zu fördern
-              </p>
-            </div>
-          </div>
-          <p></p>
-        </section>
+      <Introduction isMobile={isMobile} />
+      <BeautyCards isMobile={isMobile}/>
 
+      <div className="my-16">
         <div className="my-12">
           <img src="/aloe.jpg" alt="Praxisräume" />
         </div>
@@ -110,8 +76,8 @@ function App() {
         </section>
       </div>
       <Kontakt/>
-      <Footer/>   
-      <ScrollToTopButton/>
+      <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

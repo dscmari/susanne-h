@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <div className="px-4 my-8">
-      <div className="flex flex-col gap-4 m-4">
+      <div className="">
         {/* <a
           href="#lymphdrainage"
           className="flex items-center justify-between px-4 py-2 text-custom-white bg-custom-blue rounded tracking-tight text-xl"
@@ -36,7 +36,7 @@ export default function Navbar() {
         </a> */}
         <a
           href="#kontakt"
-          className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded-3xl text-xl w-1/2 mx-auto"
+          className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded text-xl w-1/2"
         >
           KONTAKT
           {/* <ArrowRight className="size-5" /> */}
