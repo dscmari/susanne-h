@@ -55,37 +55,41 @@ export default function BeautyCards({ isMobile }: Props) {
           </section>
         </div>
       ) : (
-          <div className="bg-custom-blue -mt-8">
+        <div className="bg-custom-blue text-custom-white -mt-8 px-24">
+          <h1 className="!text-4xl w-1/2 py-20">
+            Die Manuelle Lymphdrainage ist Ihr Geheimnis für ein frisches und
+            definiertes Erscheinungsbild. Sie ist die ultimative innere
+            Reinigung.
+          </h1>
 
-            <p className="w-1/2">Die Manuelle Lymphdrainage (MLD) ist Ihr Geheimnis für ein frisches und definiertes Erscheinungsbild. Sie ist die ultimative innere Reinigung, die Ihrem Körper hilft, das zu beseitigen, was Sie beschwert.</p>
+          <div className="flex gap-8">
+            <div className="">
+              <h1 className="">Zellulite</h1>
+              <p className="">
+                Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
+                werden abzutransportiert und Dellen gemildert
+              </p>
+            </div>
 
-              <div className="max-w-xl flex flex-col justify-center bg-custom-white rounded-lg p-12 aspect-square">
-                <h1 className="text-center !text-4xl pb-4">Zellulite</h1>
-                <p className="">
-                  Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
-                  werden abzutransportiert und Dellen gemildert
-                </p>
-              </div>
+            <div className="">
+              <h1 className="">Detox</h1>
+              <p className="">
+                Verbessert die körpereigene Entwässerung und Entschlackung des
+                Gewebes
+              </p>
+            </div>
 
-              <div className="max-w-xl flex flex-col justify-center bg-custom-white rounded-lg p-12">
-                <h1 className="text-center !text-4xl pb-4">Detox</h1>
-                <p className="">
-                  Verbessert die körpereigene Entwässerung und Entschlackung des
-                  Gewebes
-                </p>
-              </div>
-
-              <div className="max-w-xl flex flex-col justify-center bg-custom-white rounded-lg p-12">
-                <h1 className="text-center !text-4xl pb-4">Anti-Aging</h1>
-                <p className="">
-                  Reduktion von Tränensäcken, um das Hautbild zu klären und
-                  einen frischen Teint zu fördern
-                </p>
-              </div>
-
-              <Kontakt />
-       
+            <div className="">
+              <h1 className="">Anti-Aging</h1>
+              <p className="">
+                Reduktion von Tränensäcken, um das Hautbild zu klären und einen
+                frischen Teint zu fördern
+              </p>
+            </div>
           </div>
+
+          <Kontakt />
+        </div>
       )}
     </div>
   );

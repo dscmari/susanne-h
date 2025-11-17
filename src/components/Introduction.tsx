@@ -4,7 +4,7 @@ type Props = {
 
 export default function Introduction({ isMobile }: Props) {
   return (
-    <div className="pt-8 pb-4 lg:pb-0">
+    <div className="pt-8 pb-4 lg:p-0">
       {isMobile ? (
         <div className="flex flex-col mt-16">
           <div className="mx-8">
@@ -37,7 +37,7 @@ export default function Introduction({ isMobile }: Props) {
           </div>
         </div>
       ) : (
-        <div className="h-screen border-2 border-red-500">
+        <div className="h-screen">
           <div className="my-8 max-w-xs mx-auto">
             <h2 className="intro flex items-center font-thin gap-4">
               Heilpraktikerin und <br />
