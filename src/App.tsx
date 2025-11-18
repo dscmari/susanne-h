@@ -4,6 +4,7 @@ import Footer from "./components/Footer.tsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
 import checkIsMobile from "./utils/checkIsMobile";
 import BeautyCards from "./components/BeautyCards.tsx";
+import Services from "./components/Services.tsx";
 
 function App() {
   const isMobile = checkIsMobile();
@@ -11,12 +12,16 @@ function App() {
   return (
     <div id="home-container" className="relative">
       <Introduction isMobile={isMobile} />
-      <BeautyCards isMobile={isMobile}/>
+      <BeautyCards isMobile={isMobile} />
+     
+      <Services isMobile={isMobile} />
 
       <div className="my-16">
-        <div className="my-12">
-          <img src="/aloe.jpg" alt="Praxisräume" />
-        </div>
+        {isMobile && (
+          <div className="my-12">
+            <img src="/aloe.jpg" alt="Praxisräume" />
+          </div>
+        )}
 
         <section id="anwendungen" className="rounded mx-8">
           <p className="py-4">
@@ -52,7 +57,7 @@ function App() {
             </p>
           </div>
         </section>
-        <Kontakt/>
+        <Kontakt />
         <section id="lymphdrainage" className="mx-8 mt-16">
           <h1>Wie funktionert eine Lymphdrainage?</h1>
           <p className="my-4">
@@ -75,7 +80,7 @@ function App() {
           </p>
         </section>
       </div>
-      <Kontakt/>
+      <Kontakt />
       <Footer />
       <ScrollToTopButton />
     </div>

@@ -37,26 +37,27 @@ export default function Introduction({ isMobile }: Props) {
           </div>
         </div>
       ) : (
-        <div className="h-screen">
-          <div className="my-8 max-w-xs mx-auto">
-            <h2 className="intro flex items-center font-thin gap-4">
+        <div>
+          {/* upper part */}
+          <div className="mx-16 pt-16 max-w-xs ">
+           <h2 className="intro !text-base flex font-thin gap-4 items-center justify-center">
               Heilpraktikerin und <br />
               Lymphtherapeutin
             </h2>
-            <div className=" merriweather mt-4">
-              <h1 className="!text-3xl pl-4"> SUSANNE</h1>
-              <h1 className="tracking-wider !text-3xl text-right pr-4">
+            <div className=" merriweather mt-2 max-w-1/2 mx-auto">
+              <h1 className="!text-xl"> SUSANNE</h1>
+              <h1 className="tracking-wider !text-xl text-right pl-12">
                 HACKENBERG
               </h1>
             </div>
           </div>
-
-          <div className="grid grid-cols-12 mx-12">
-            <div className="col-span-6 p-12 ">
-              <h1 className="!text-5xl font-thin tracking-wide">
+          {/* lower part */}
+          <div className="grid grid-cols-12 mx-12 py-36">
+            <div className="col-span-6 pl-12 pr-16">
+              <h1 className="!text-5xl tracking-wide">
                 Detox und Wohlbefinden
               </h1>
-              <h2 className="text-custom-blue !text-4xl tracking-wide mt-2">
+              <h2 className="text-custom-blue !text-5xl mt-2">
                 Leichtigkeit beginnt unter der Haut
               </h2>
               <p className="text-xl mt-16 mb-16">
@@ -67,21 +68,21 @@ export default function Introduction({ isMobile }: Props) {
               </p>
               <a
                 href="#kontakt"
-                className="px-24 py-4 text-center tracking-tight text-custom-white bg-custom-blue rounded"
+                className="block max-w-xs px-24 py-4 text-center tracking-tight text-custom-white bg-custom-blue rounded"
               >
                 KONTAKT
                 {/* <ArrowRight className="size-5" /> */}
               </a>
             </div>
             <div className="col-span-6 relative">
-              <div className="absolute top-0 right-0">
+              <div className="absolute -top-28 -right-12">
                 <img
                   src="aloe.jpg"
                   alt="Praxisräume"
                   style={{ height: "500px", width: "500px" }}
                 />
               </div>
-              <div className="landing-image bg-red-500 absolute top-40 left-12 z-100">
+              <div className="landing-image bg-red-500 absolute top-12 left-12 z-100">
                 <img
                   src="blank_woman_detailed_placeholder.png"
                   alt="portrait"

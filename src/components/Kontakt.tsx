@@ -2,7 +2,7 @@
 
 export default function Kontakt() {
   return (
-    <div className="md:bg-custom-white md:w-full md:rounded-lg md:flex md:items-center">
+    <div className="">
     <div className="md:p-16 text-center md:max-w-md md:mx-auto">
       <h1>Jetzt unverbindlich anfragen</h1>
       <p className="my-4 font-thin">

@@ -21,20 +21,10 @@
   font-display: swap;
 }
 
-html{
-  border: solid red 3px;
-  margin: 0;
-  padding:0;
-}
-body {
-  border: solid green 3px;
-  margin:0;
-  padding:0
-}
-
 :root {
   background-color: var(--color-custom-white);
   scroll-behavior: smooth;
+  
 }
 p{
   font-family: 'Montserrat Variable';
