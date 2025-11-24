@@ -5,6 +5,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
 import checkIsMobile from "./utils/checkIsMobile";
 import BeautyCards from "./components/BeautyCards.tsx";
 import Services from "./components/Services.tsx";
+import Lymphdrainage from "./components/Lymphdrainage.tsx";
 
 function App() {
   const isMobile = checkIsMobile();
@@ -13,52 +14,15 @@ function App() {
     <div id="home-container" className="relative">
       <Introduction isMobile={isMobile} />
       <BeautyCards isMobile={isMobile} />
-     
-      <Services isMobile={isMobile} />
-
-      <div className="my-16">
         {isMobile && (
           <div className="my-12">
             <img src="/aloe.jpg" alt="Praxisräume" />
           </div>
         )}
-
-        <section id="anwendungen" className="rounded mx-8">
-          <p className="py-4">
-            Was sind klassische gesundheitsbezogene Anwendungbereiche der
-            Lymphdrainage?
-          </p>
-          <div className="flex flex-col gap-8">
-            <div className="bg-custom-white rounded p-4 py-8">
-              <h1 className="text-center pb-4">Lymphödeme</h1>
-              <p className="">
-                Die Lymphdrainage hilft, Schwellungen, z.B. nach
-                Krebsbehandlungen oder Lymphknotenentfernungen, zu reduzieren
-              </p>
-            </div>
-            <div className="bg-custom-white p-4 rounded py-8">
-              <h1 className="text-center pb-4">Postoperative Behandlungen</h1>
-              <p className="">
-                Schwellungen und Ödeme können reduziert, die Schmerzlinderung
-                gefördert und die gesamte Heilungszeit verkürzt werden
-              </p>
-            </div>
-            <div className="bg-custom-white p-4 rounded py-8">
-              <h1 className="text-center pb-4">Rheumatismus</h1>
-              <p className="">
-                Schmerzempfinden und Schwellungen in Gelenken können verbessert
-                werden
-              </p>
-            </div>
-            <p>
-              Weitere Anwendugsgebiete, bei denen die Lymphdrainage unterstützen
-              kann sind Arthrose, offene/geschwollene Beine, Migräne und
-              Narbenbehandlung.
-            </p>
-          </div>
-        </section>
-        <Kontakt />
-        <section id="lymphdrainage" className="mx-8 mt-16">
+        <Services isMobile={isMobile} />
+        {isMobile && <Kontakt isMobile={false} />}
+        <Lymphdrainage isMobile={isMobile} />
+        {/* <section id="lymphdrainage" className="mx-8 mt-16">
           <h1>Wie funktionert eine Lymphdrainage?</h1>
           <p className="my-4">
             Die Manuelle Lymphdrainage ist eine spezielle, sanfte Therapieform,
@@ -78,9 +42,9 @@ function App() {
             Schwellungen und unterstützt damit indirekt das Immunsystem und die
             Heilung.
           </p>
-        </section>
-      </div>
-      <Kontakt />
+        </section> */}
+ 
+      <Kontakt isMobile={isMobile} />
       <Footer />
       <ScrollToTopButton />
     </div>

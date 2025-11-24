@@ -2,6 +2,7 @@
 
 @theme {
   --color-custom-blue: #00a8ff;
+  --color-custom-darkblue: #273c75;
   --color-custom-white: #f5f6fa;
 }
 
@@ -89,4 +90,8 @@ h1, h2 {
   background: linear-gradient(to left, transparent, var(--color-custom-blue)); 
 }
 
+.contact-container{
+   background-image: url('/tea.jpg');
+
+}
 

@@ -9,63 +9,67 @@ export default function BeautyCards({ isMobile }: Props) {
     <div className="max-w-6xl mx-auto lg:max-w-none">
       {isMobile ? (
         <div>
-          <div className="my-16 mb-32">
-            <Kontakt />
+          <div className="my-16 mb-24">
+            <Kontakt isMobile={true} />
           </div>
 
           <section
             id="anwendungen"
             className="flex flex-col gap-8 rounded my-12 mx-8"
           >
-            <p>
+            <p className="">
               In welchem Bereichen unterstützt die{" "}
-              <a href="#lymphdrainage" className="underline">
+              <a href="#lymphdrainage" className="underline text-custom-blue">
                 Lymphdrainage
               </a>
               ?
             </p>
-            <div className="flex flex-col gap-8">
-              <div className="bg-custom-white rounded p-4 py-8">
-                <h1 className="text-center pb-4">Zellulite</h1>
-                <p className="">
-                  Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
-                  werden abzutransportiert und Dellen gemildert
-                </p>
-              </div>
+            <div className="flex flex-col justify-center bg-custom-white rounded p-8 aspect-square">
+              <h1 className="text-center pb-4 !text-4xl tracking-wider">
+                Zellulite
+              </h1>
+              <p className="text-lg">
+                Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
+                werden abzutransportiert und Dellen gemildert
+              </p>
             </div>
-            <div className="flex flex-col gap-8">
-              <div className="bg-custom-white rounded p-4 py-8">
-                <h1 className="text-center pb-4">Detox</h1>
-                <p className="">
-                  Verbessert die körpereigene Entwässerung und Entschlackung des
-                  Gewebes
-                </p>
-              </div>
+
+            <div className="flex flex-col justify-center bg-custom-white rounded p-8 aspect-square">
+              <h1 className="text-center pb-4 !text-4xl tracking-wider">
+                Detox
+              </h1>
+              <p className="text-lg">
+                Verbessert die körpereigene Entwässerung und Entschlackung des
+                Gewebes
+              </p>
             </div>
-            <div className="flex flex-col gap-8">
-              <div className="bg-custom-white rounded p-4 py-8">
-                <h1 className="text-center pb-4">Anti-Aging</h1>
-                <p className="">
-                  Reduktion von Tränensäcken, um das Hautbild zu klären und
-                  einen frischen Teint zu fördern
-                </p>
-              </div>
+
+            <div className="flex flex-col justify-center bg-custom-white rounded p-8 aspect-square">
+              <h1 className="text-center pb-4 !text-4xl tracking-wider">
+                Anti-Aging
+              </h1>
+              <p className="text-lg">
+                Reduktion von Tränensäcken, um das Hautbild zu klären und einen
+                frischen Teint zu fördern
+              </p>
             </div>
+
             <p></p>
           </section>
         </div>
       ) : (
-        <div className="bg-custom-blue text-custom-white -mt-8 px-24 py-36">
+        <div className="bg-custom-darkblue text-custom-white -mt-8 px-24 py-36">
           <h1 className="!text-4xl w-1/2 pb-24">
-            Die Lymphdrainage ist das Geheimnis für ein frisches und
-            definiertes Erscheinungsbild. Sie ist die ultimative innere
-            Reinigung.
+            Die <span className="text-custom-blue">Lymphdrainage</span> ist das
+            Geheimnis für ein frisches und definiertes Erscheinungsbild. Sie ist
+            die ultimative{" "}
+            <span className="text-custom-blue">innere Reinigung</span>
           </h1>
 
           <div className="flex gap-8 text-lg">
             <div className="flex-1">
               <h1 className="mb-4">Zellulite</h1>
-              <p className="pr-4">
+              <p className="pr-4 text-base/8">
                 Im Bindegewebe gestaute Flüssigkeiten und Stoffwechselabfälle
                 werden abzutransportiert und Dellen gemildert. Dadurch gewinnt
                 die Haut an Spannkraft und Elastizität zurück.
@@ -74,7 +78,7 @@ export default function BeautyCards({ isMobile }: Props) {
 
             <div className="flex-1">
               <h1 className="mb-4">Detox</h1>
-              <p className="pr-4">
+              <p className="pr-4 text-base/8">
                 Verbessert die körpereigene Entwässerung und Entschlackung des
                 Gewebes. Ihr Körper wird vitalisiert und die Haut erhält ein
                 frisches, gesundes Strahlen.
@@ -83,20 +87,22 @@ export default function BeautyCards({ isMobile }: Props) {
 
             <div className="flex-1">
               <h1 className="mb-4">Anti-Aging</h1>
-              <p className="pr-4">
-               Reduktion von Tränensäcken, um das Hautbild zu klären und einen frischen Teint zu fördern. Durch die bessere Versorgung mit Nährstoffen wird zudem die Kollagenproduktion angeregt und feine Fältchen gemindert.
+              <p className="pr-4 text-base/8">
+                Reduktion von Tränensäcken, um das Hautbild zu klären und einen
+                frischen Teint zu fördern. Durch die bessere Versorgung mit
+                Nährstoffen wird zudem die Kollagenproduktion angeregt und feine
+                Fältchen gemindert.
               </p>
             </div>
           </div>
 
-            <a
-                href="#kontakt"
-                className="block mt-24 max-w-xs px-24 py-4 text-center tracking-tight text-custom-blue bg-custom-white rounded"
-              >
-                KONTAKT
-                {/* <ArrowRight className="size-5" /> */}
-              </a>
-          {/* <Kontakt /> */}
+          <a
+            href="#kontakt"
+            className="block mt-24 max-w-xs px-24 py-4 text-center tracking-tight text-custom-darkblue bg-custom-white rounded"
+          >
+            KONTAKT
+            {/* <ArrowRight className="size-5" /> */}
+          </a>
         </div>
       )}
     </div>

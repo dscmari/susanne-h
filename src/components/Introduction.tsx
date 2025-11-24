@@ -26,13 +26,17 @@ export default function Introduction({ isMobile }: Props) {
 
           <div className="flex justify-center my-8">
             <div className="flex justify-center mx-8 relative max-w-sm">
-              <span className="text-6xl absolute left-4 -top-4">“</span>
-              <p className="text-center mx-8 w-2/3 text-center text-2xl/10 text-slate-600 italic font-light tracking-wide">
+              <span className="text-custom-darkblue text-6xl absolute left-4 -top-4">
+                “
+              </span>
+              <p className="text-center mx-8 w-2/3 text-center text-2xl/10 text-custom-darkblue italic font-light tracking-wide">
                 Aus langjähriger Erfahrung wächst Spezialisierung: Mit voller
                 Begeisterung widme ich mich der Lymphologie und löse, was die
                 Lymphe staut.
               </p>
-              <span className="text-6xl/0 absolute right-4 -bottom-4">”</span>
+              <span className="text-custom-darkblue text-6xl/0 absolute right-4 -bottom-4">
+                ”
+              </span>
             </div>
           </div>
         </div>
@@ -40,7 +44,7 @@ export default function Introduction({ isMobile }: Props) {
         <div>
           {/* upper part */}
           <div className="mx-16 pt-16 max-w-xs ">
-           <h2 className="intro !text-base flex font-thin gap-4 items-center justify-center">
+            <h2 className="intro !text-base flex font-thin gap-4 items-center justify-center">
               Heilpraktikerin und <br />
               Lymphtherapeutin
             </h2>
@@ -61,14 +65,16 @@ export default function Introduction({ isMobile }: Props) {
                 Leichtigkeit beginnt unter der Haut
               </h2>
               <p className="text-xl mt-16 mb-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                aspernatur iste voluptate? Sequi consequatur, rem, fugiat
-                veritatis quo blanditiis alias libero velit dolore illo quisquam
-                doloribus incidunt, sunt iste sapiente?
+                Aus langjähriger Erfahrung entwickelte sich meine besondere
+                Begeisterung für das Gebiet der Lymphologie. Vorwiegend und mit
+                großer Leidenschaft arbeite ich auf dem Feld der <a className="underline text-custom-darkblue" href="#lymphdrainage">Manuellen
+                Lymphdrainage</a>. Ich behandle alle Beschwerden, die
+                mit dem Lymphsystem zusammenhängen, um Entstauung und
+                Regeneration zu fördern.
               </p>
               <a
                 href="#kontakt"
-                className="block max-w-xs px-24 py-4 text-center tracking-tight text-custom-white bg-custom-blue rounded"
+                className="block max-w-xs px-24 py-4 text-center tracking-tight text-custom-white bg-custom-darkblue rounded"
               >
                 KONTAKT
                 {/* <ArrowRight className="size-5" /> */}
@@ -82,7 +88,7 @@ export default function Introduction({ isMobile }: Props) {
                   style={{ height: "500px", width: "500px" }}
                 />
               </div>
-              <div className="landing-image bg-red-500 absolute top-12 left-12 z-100">
+              <div className="landing-image bg-slate-300 absolute top-12 left-12 z-100">
                 <img
                   src="blank_woman_detailed_placeholder.png"
                   alt="portrait"

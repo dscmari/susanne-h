@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <div className="grid grid-cols-1  lg:grid-cols-2 bg-custom-white p-8 mt-20">
+    <div className="grid grid-cols-1  lg:grid-cols-2 bg-custom-white p-8 mt-20 lg:mt-0">
       <div className="">
         <h3>Impressum</h3>
         <ol>
