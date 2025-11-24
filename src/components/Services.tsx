@@ -1,4 +1,3 @@
-
 type Props = {
   isMobile: boolean;
   isTablet: boolean;
@@ -79,12 +78,14 @@ export default function Services({ isMobile, isTablet }: Props) {
                 <span className="text-custom-blue">Medizinische </span>Anwendung
               </h1>
               <p className="py-4">
-                {" "}
-                Kurzes Intro zu anwendungsfällen: Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Iusto possimus, voluptatem
-                veritatis, suscipit reprehenderit similique adipisci distinctio,
-                at maxime dicta molestias quae vero beatae nam animi tenetur.
-                Beatae, sed vitae.
+                Die Lymphdrainage ist eine sanfte,
+                rhythmische Massagetechnik, die darauf abzielt, das
+                Lymphsystem zu aktivieren und den Abtransport von
+                überschüssiger Gewebeflüssigkeit und Schadstoffen zu fördern.
+                Sie ist eine anerkannte Therapieform zur Behandlung von
+                Schwellungen und unterstützt den Körper maßgeblich
+                in der Heilung und Regeneration nach Verletzungen, Unfällen oder
+                Operationen.
               </p>
             </div>
             <div className="py-8 flex flex-col gap-12">
