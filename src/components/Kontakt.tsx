@@ -16,7 +16,7 @@ export default function Kontakt({ isMobile, isTablet }: Props) {
             Sie erreichen mich per Telefon, WhatsApp
           </p>
           <ol id="kontakt" className="flex flex-col gap-4">
-            <li className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded-3xl text-xl w-xs md:w-full mx-auto">
+            <li className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded-3xl text-xl w-xs md:w-full mx-auto darkmode">
               <a href="tel:+49891234567" className="">
                 +49 89 123 4567
               </a>
@@ -24,7 +24,7 @@ export default function Kontakt({ isMobile, isTablet }: Props) {
             <li>
               <p className="font-thin">oder Email</p>
             </li>
-            <li className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded-3xl text-xl w-xs md:w-full mx-auto">
+            <li className="px-4 py-2 text-center tracking-tight text-custom-white bg-custom-blue rounded-3xl text-xl w-xs md:w-full mx-auto darkmode">
               <a href="mailto:max.mustermann@ihre-domain.de">
                 max.mustermann@domain.de
               </a>

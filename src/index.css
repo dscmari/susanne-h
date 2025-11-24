@@ -103,3 +103,14 @@ h2 {
     background-image: url("/tea.jpg");
   }
 }
+
+@media (prefers-color-scheme: dark) {
+.aspect-square {
+  color:var(--color-custom-white);
+  background-color: var(--color-custom-darkblue);
+}
+.darkmode {
+    color:var(--color-custom-white);
+  background-color: var(--color-custom-darkblue);
+}
+}
