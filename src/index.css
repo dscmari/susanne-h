@@ -105,12 +105,49 @@ h2 {
 }
 
 @media (prefers-color-scheme: dark) {
+  .aspect-square {
+    color: var(--color-custom-white);
+    background-color: var(--color-custom-darkblue);
+  }
+  .darkmode {
+    color: var(--color-custom-white);
+    background-color: var(--color-custom-darkblue);
+  }
+}
+
 .aspect-square {
-  color:var(--color-custom-white);
-  background-color: var(--color-custom-darkblue);
+  /* Fügt relative Positionierung hinzu, damit die Pseudo-Elemente
+     (die Striche) relativ dazu positioniert werden können */
+  position: relative;
+  /* Stellt sicher, dass die Striche nicht über den Container hinausragen */
+  overflow: hidden;
 }
-.darkmode {
-    color:var(--color-custom-white);
-  background-color: var(--color-custom-darkblue);
+
+.aspect-square::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: -100px;
+  width: 400px;
+  height: 1px; /* Dünne Linie */
+  background-color: var(--color-custom-blue);
+  opacity: 0.3;
+
+  /* TRANSFORMATION */
+  /* Dreht die Linie und verschiebt sie leicht in die Ecke, um das Abschneiden zu vermeiden */
+  transform: rotate(-45deg) translate(-2px, 2px);
 }
+
+.aspect-square::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: -100px;
+  width: 600px;
+  height: 1px; /* Dünne Linie */
+  background-color: var(--color-custom-blue);
+  opacity: 0.3;
+  /* TRANSFORMATION */
+  /* Dreht die Linie und verschiebt sie leicht in die Ecke, um das Abschneiden zu vermeiden */
+  transform: rotate(-45deg) translate(-2px, 2px);
 }
