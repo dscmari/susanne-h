@@ -1,8 +1,11 @@
+import { useEffect, useState } from "react";
+
 type Props = {
   isMobile: boolean;
+  isTablet: boolean;
 };
 
-export default function Services({ isMobile }: Props) {
+export default function Services({ isMobile, isTablet }: Props) {
   return (
     <div className="">
       {isMobile ? (
@@ -41,9 +44,8 @@ export default function Services({ isMobile }: Props) {
               </p>
             </div>
             <p>
-              Weitere Anwendugsgebiete, bei denen die Lymphdrainage
-              unterstützen kann sind{" "}
-              <span className="text-custom-blue">Arthrose</span>,{" "}
+              Weitere Anwendugsgebiete, bei denen die Lymphdrainage unterstützen
+              kann sind <span className="text-custom-blue">Arthrose</span>,{" "}
               <span className="text-custom-blue">geschwollene Beine</span>,
               <span className="text-custom-blue"> Migräne</span> und bei der
               Behandlung von <span className="text-custom-blue">Narben</span>.
@@ -52,15 +54,27 @@ export default function Services({ isMobile }: Props) {
         </section>
       ) : (
         <div className="grid grid-cols-12 py-36 pr-24">
-          <div className="col-span-6 relative">
-            <img
-              src="blank_woman_detailed_placeholder.png"
-              className="absolute -top-50 left-1/2 -translate-x-1/2 bg-slate-300"
-              alt="portrait"
-              style={{ height: "700px", width: "500px" }}
-            />
-          </div>
-          <div className="col-span-6">
+          {isTablet ? (
+            <div className="col-span-6 relative">
+              <img
+                src="blank_woman_detailed_placeholder.png"
+                className="absolute top-0 left-1/2 -translate-x-1/2 bg-slate-300"
+                alt="portrait"
+                style={{ height: "600px", width: "400px" }}
+              />
+            </div>
+          ) : (
+            <div className="col-span-6 relative">
+              <img
+                src="blank_woman_detailed_placeholder.png"
+                className="absolute -top-50 left-1/2 -translate-x-1/2 bg-slate-300"
+                alt="portrait"
+                style={{ height: "750px", width: "500px" }}
+              />
+            </div>
+          )}
+
+          <div className="col-span-6 md:pl-4">
             <div>
               <h1 className="!text-4xl">
                 <span className="text-custom-blue">Medizinische </span>Anwendung

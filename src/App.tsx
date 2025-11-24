@@ -6,21 +6,23 @@ import checkIsMobile from "./utils/checkIsMobile";
 import BeautyCards from "./components/BeautyCards.tsx";
 import Services from "./components/Services.tsx";
 import Lymphdrainage from "./components/Lymphdrainage.tsx";
+import checkIsTablet from "./utils/checkIsTablet.ts";
 
 function App() {
   const isMobile = checkIsMobile();
+  const isTablet = checkIsTablet();
 
   return (
     <div id="home-container" className="relative">
-      <Introduction isMobile={isMobile} />
-      <BeautyCards isMobile={isMobile} />
+      <Introduction isMobile={isMobile} isTablet={isTablet} />
+      <BeautyCards isMobile={isMobile} isTablet={isTablet} />
         {isMobile && (
           <div className="my-12">
             <img src="/aloe.jpg" alt="Praxisräume" />
           </div>
         )}
-        <Services isMobile={isMobile} />
-        {isMobile && <Kontakt isMobile={false} />}
+        <Services isMobile={isMobile} isTablet={isTablet} />
+        {isMobile && <Kontakt isMobile={isMobile} isTablet={false} />}
         <Lymphdrainage isMobile={isMobile} />
         {/* <section id="lymphdrainage" className="mx-8 mt-16">
           <h1>Wie funktionert eine Lymphdrainage?</h1>
@@ -44,7 +46,7 @@ function App() {
           </p>
         </section> */}
  
-      <Kontakt isMobile={isMobile} />
+      <Kontakt isMobile={isMobile} isTablet={isTablet} />
       <Footer />
       <ScrollToTopButton />
     </div>

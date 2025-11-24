@@ -4,7 +4,7 @@ export default function checkIsMobile() {
     const [isMobile, setIsMobile] = useState(false);
   
     const handleResize = () => {
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 768) {
         //md: 768 lg:1024
         setIsMobile(true);
       } else {
@@ -14,7 +14,7 @@ export default function checkIsMobile() {
   
     useEffect(() => {
       window.addEventListener("resize", handleResize);
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 768) {
         //md: 768 lg:1024
         setIsMobile(true);
       }

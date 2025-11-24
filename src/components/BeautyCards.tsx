@@ -2,15 +2,16 @@ import Kontakt from "./Kontakt";
 
 type Props = {
   isMobile: boolean;
+  isTablet: boolean
 };
 
-export default function BeautyCards({ isMobile }: Props) {
+export default function BeautyCards({ isMobile, isTablet }: Props) {
   return (
     <div className="max-w-6xl mx-auto lg:max-w-none">
       {isMobile ? (
         <div>
           <div className="my-16 mb-24">
-            <Kontakt isMobile={true} />
+            <Kontakt isMobile={isMobile} isTablet={isTablet} />
           </div>
 
           <section
@@ -59,7 +60,7 @@ export default function BeautyCards({ isMobile }: Props) {
         </div>
       ) : (
         <div className="bg-custom-darkblue text-custom-white -mt-8 px-24 py-36">
-          <h1 className="!text-4xl w-1/2 pb-24">
+          <h1 className="!text-4xl lg:w-1/2 pb-24">
             Die <span className="text-custom-blue">Lymphdrainage</span> ist das
             Geheimnis für ein frisches und definiertes Erscheinungsbild. Sie ist
             die ultimative{" "}

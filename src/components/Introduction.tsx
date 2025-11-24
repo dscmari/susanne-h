@@ -1,8 +1,12 @@
+
+
 type Props = {
   isMobile: boolean;
+  isTablet: boolean;
 };
 
-export default function Introduction({ isMobile }: Props) {
+export default function Introduction({ isMobile, isTablet }: Props) {
+
   return (
     <div className="pt-8 pb-4 lg:p-0">
       {isMobile ? (
@@ -43,7 +47,7 @@ export default function Introduction({ isMobile }: Props) {
       ) : (
         <div>
           {/* upper part */}
-          <div className="mx-16 pt-16 max-w-xs ">
+          <div className="mx-16 pt-16 max-w-xs">
             <h2 className="intro !text-base flex font-thin gap-4 items-center justify-center">
               Heilpraktikerin und <br />
               Lymphtherapeutin
@@ -67,10 +71,15 @@ export default function Introduction({ isMobile }: Props) {
               <p className="text-xl mt-16 mb-16">
                 Aus langjähriger Erfahrung entwickelte sich meine besondere
                 Begeisterung für das Gebiet der Lymphologie. Vorwiegend und mit
-                großer Leidenschaft arbeite ich auf dem Feld der <a className="underline text-custom-darkblue" href="#lymphdrainage">Manuellen
-                Lymphdrainage</a>. Ich behandle alle Beschwerden, die
-                mit dem Lymphsystem zusammenhängen, um Entstauung und
-                Regeneration zu fördern.
+                großer Leidenschaft arbeite ich auf dem Feld der{" "}
+                <a
+                  className="underline text-custom-darkblue"
+                  href="#lymphdrainage"
+                >
+                  Manuellen Lymphdrainage
+                </a>
+                . Ich behandle alle Beschwerden, die mit dem Lymphsystem
+                zusammenhängen, um Entstauung und Regeneration zu fördern.
               </p>
               <a
                 href="#kontakt"
@@ -80,14 +89,18 @@ export default function Introduction({ isMobile }: Props) {
                 {/* <ArrowRight className="size-5" /> */}
               </a>
             </div>
+
             <div className="col-span-6 relative">
-              <div className="absolute -top-28 -right-12">
-                <img
-                  src="aloe.jpg"
-                  alt="Praxisräume"
-                  style={{ height: "500px", width: "500px" }}
-                />
-              </div>
+              {!isTablet && (
+                <div className="absolute -top-28 -right-12">
+                  <img
+                    src="aloe.jpg"
+                    alt="Praxisräume"
+                    style={{ height: "500px", width: "500px" }}
+                  />
+                </div>
+              )}
+
               <div className="landing-image bg-slate-300 absolute top-12 left-12 z-100">
                 <img
                   src="blank_woman_detailed_placeholder.png"

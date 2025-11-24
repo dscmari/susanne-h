@@ -108,7 +108,7 @@ export default function Lymphdrainage({ isMobile }: Props) {
           id="lymphdrainage"
           className="bg-custom-darkblue px-24 py-32 text-custom-white"
         >
-          <h1 className="!text-4xl w-2/3 pb-24 ml-auto text-right">
+          <h1 className="!text-4xl lg:w-2/3 pb-24 ml-auto lg:text-right">
             Die Manuelle Lymphdrainage ist eine{" "}
             <span className="text-custom-blue">
               sanfte und rhythmische Behandlungstechnik
